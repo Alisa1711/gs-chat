@@ -1,0 +1,171 @@
+.gs-chat__teams-view {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    min-height: inherit;
+    min-width: inherit;
+    padding-top: 56px;
+    padding-right: 88px;
+    padding-left: 88px;
+    padding-bottom: 80px;
+
+    &__title {
+        font-size: 32px;
+        line-height: 40px;
+        text-align: center;
+        color: #2A353F;
+    }
+
+    &__subtitle {
+        margin-top: 13px;
+        font-size: 14px;
+        line-height: 16px;
+        text-align: center;
+        color: #2A353F;
+    }
+
+    &__list {
+        margin-top: 65px;
+        height: 100%;
+        width: 100%;
+        lost-utility: clearfix;
+    }
+
+    &__member {
+        /*lost-column: 1/2;*/
+        lost-column: 1/4;
+
+        &:nth-child(n + 5) {
+            margin-top: 23px;
+        }
+
+        @media screen and ( max-height: 800px ) {
+            &:nth-child(n + 5):not(:last-child) {
+                display: none;
+            }
+            &:nth-child(4) {
+                display: none;
+            }
+            &:last-child {
+                margin-top: 0;
+            }
+        }
+        /* &:nth-child(n + 3) {
+             margin-top: 23px;
+         }
+         @media (min-width: 580px) {
+             lost-column: 1/4;
+             &:nth-child(n + 3) {
+                 margin-top: 0px;
+             }
+             &:nth-child(n + 5) {
+                 margin-top: 23px;
+             }
+         }*/
+    }
+
+    &__sent {
+        margin-top: 58px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-grow: 1;
+        flex-basis: 100%;
+        position: relative;
+        bottom: 0;
+    }
+}
+
+.gs-chat__teams-view_chat {
+    flex-shrink: 0;
+    padding-top: 32px;
+    padding-right: 32px;
+    padding-left: 32px;
+    padding-bottom: 46px;
+    min-height: auto;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.12);
+    position: static;
+
+    .gs-chat__teams-view__title {
+        text-align: left;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 21px;
+    }
+
+    .gs-chat__teams-view__subtitle {
+        text-align: left;
+        font-size: 14px;
+        line-height: 16px;
+    }
+
+    .gs-chat__teams-view__list {
+        display: flex;
+        position: relative;
+        left: -10px;
+        margin-top: 21px;
+    }
+
+    .gs-chat__teams-view__sent {
+        position: absolute;
+        z-index: 2;
+        bottom: 24px;
+        right: 24px;
+    }
+
+    .gs-chat__teams-view__member {
+        float: none !important;
+        margin-right: 0 !important;
+    }
+}
+
+
+.gs-chat__teams-view_full {
+    flex-shrink: 0;
+    padding: 24px;
+    height: 100%;
+    min-height: inherit;
+    position: static;
+
+    .gs-chat__teams-view__title {
+        display: none;
+    }
+
+    .gs-chat__teams-view__subtitle {
+        display: none;
+    }
+
+    .gs-chat__teams-view__list {
+        height: 100%;
+        min-height: inherit;
+        position: relative;
+        margin: 0px;
+
+    }
+
+    .gs-chat__teams-view__sent {
+        position: absolute;
+        z-index: 2;
+        bottom: 24px;
+        right: 24px;
+    }
+
+    .gs-chat__teams-view__member {
+        lost-column: 1/3;
+
+        &:nth-child(n + 4) {
+            margin-top: 24px;
+        }
+    }
+}
+
+.gs-chat__teams-view_chat {
+    .gs-chat__teams-view__member {
+        &:nth-child(n + 5) {
+            margin-top: 0;
+        }
+    }
+
+}

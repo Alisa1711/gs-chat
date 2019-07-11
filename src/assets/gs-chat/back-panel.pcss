@@ -1,0 +1,128 @@
+.gs-chat__back-panel {
+    position: absolute;
+    top: 62px;
+    width: 100%;
+    height: 56px;
+    flex-shrink: 0;
+    padding-left: 28px;
+    z-index: 4;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background: #FFFFFF;
+    box-shadow: 0px 5px 5px rgba(34, 61, 83, 0.1);
+    opacity: 0.9;
+    cursor: pointer;
+
+    .arrow_svg__color {
+        opacity: 0.5;
+    }
+    &:hover {
+        .arrow_svg__color {
+            opacity: 1;
+        }
+    }
+
+    &__avatar {
+        margin-left: 20px;
+        display: block;
+        width: 40px;
+        height: 40px;
+        border-radius: 50% 50%;
+        overflow: hidden;
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    }
+
+    &__text {
+        margin-left: 16px;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 21px;
+        color: #2A353F;
+    }
+
+    &__icon {
+        display: flex;
+        align-items: center;
+    }
+
+    &__full {
+        display: flex;
+        align-items: center;
+        position: absolute;
+        padding-left: 24px;
+        z-index: 4;
+        left: 0;
+        top: -116px;
+       /* transform: translateY(-116px)*/;
+        width: 100%;
+        height: 116px;
+        background: #FCFCFC;
+        box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.12);
+        animation: slide-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    }
+    &__full__members {
+        margin-left: 43px;
+        display: flex;
+    }
+    &__full__member {
+        &:not(:first-child) {
+            margin-left: 8px;
+        }
+    }
+
+}
+
+.gs-chat__back-panel_fullheader {
+    opacity: 1;
+    .gs-chat__back-panel__full {
+        animation: slide-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    }
+}
+
+.gs-chat__back-panel_static {
+    position: static;
+}
+.gs-chat__back-panel_size-min {
+    position: absolute;
+    top: 84px;
+    left: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    border-radius: 50% 50%;
+    .gs-chat__back-panel__avatar {
+        display: none;
+    }
+    .gs-chat__back-panel__text {
+        display: none;
+    }
+    .gs-chat__back-panel__full {
+        display: none;
+    }
+}
+
+@keyframes slide-bottom {
+    0% {
+        transform: translateY(-116px);
+    }
+    100% {
+        transform: translateY(178px);
+    }
+}
+
+@keyframes slide-top {
+    0% {
+        transform: translateY(178px);
+    }
+    100% {
+        transform: translateY(-116px);
+    }
+}

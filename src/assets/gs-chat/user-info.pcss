@@ -1,0 +1,58 @@
+.gs-chat__user-info {
+
+    &__avatar {
+        max-width: 600px;
+        max-height: 600px;
+        overflow: hidden;
+        img {
+            transition: transform 0.4s;
+            max-width: 100%;
+            height: auto;
+            object-fit: cover;
+            &:hover {
+                transform: scale(1.2);
+            }
+        }
+
+    }
+
+    &__descr {
+        padding: 0 24px;
+        padding-bottom: 46px;
+        margin-top: 36px;
+    }
+
+    &__name {
+        font-size: 24px;
+        line-height: 140%;
+        color: #2A353F;
+    }
+
+    &__job {
+        font-size: 14px;
+        line-height: 20px;
+        display: flex;
+        align-items: center;
+        color: rgba(42, 53, 63, 0.54);
+    }
+
+    &__tel {
+        margin-top: 22px;
+        display: block;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 21px;
+        color: #2A353F;
+        text-decoration: none;
+    }
+
+    &__email {
+        margin-top: 9px;
+        display: block;
+        font-size: 12px;
+        line-height: 14px;
+        color: rgba(42, 53, 63, 0.54);
+        text-decoration: none;
+    }
+
+}

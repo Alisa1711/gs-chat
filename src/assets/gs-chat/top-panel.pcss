@@ -1,0 +1,223 @@
+.gs-chat {
+    &__top-panel {
+        position: absolute;
+        width: 100%;
+        z-index: 5;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        --tap-bg-color: #263F56;
+        background: var(--tap-bg-color);
+        opacity: 0.9;
+    }
+
+    &__top-panel_static {
+        position: relative;
+    }
+
+    &__tabs {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 24px;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+    }
+
+    &__tab {
+        position: relative;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        padding-left: 24px;
+        padding-top: 16px;
+        padding-bottom: 16px;
+        padding-right: 34px;
+        color: #FFF;
+
+        span {
+            margin-left: 12px;
+        }
+
+
+        svg {
+
+            &:last-child {
+                display: none;
+            }
+        }
+
+    }
+
+    &__tab-support {
+        .support-unactive_svg__color {
+            opacity: 0.5;
+        }
+
+        &:hover {
+            .support-unactive_svg__color {
+                opacity: 1;
+            }
+        }
+    }
+
+    &__tab-chat {
+        .chat-unactive_svg__color {
+            opacity: 0.5;
+        }
+
+        &:hover {
+            .chat-unactive_svg__color {
+                opacity: 1;
+            }
+        }
+    }
+
+    &__tab-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    }
+
+
+    &__top-panel-sound {
+        position: relative;
+        margin-left: auto;
+        margin-right: 27px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        svg {
+            pointer-events: none;
+            position: relative;
+            z-index: 1;
+            cursor: pointer;
+            .sound_svg__color {
+                opacity: 0.5;
+            }
+            .mute_svg__color {
+                opacity: 0.5;
+            }
+        }
+        &:hover {
+            svg {
+                .sound_svg__color {
+                    opacity: 1;
+                }
+                .mute_svg__color {
+                    opacity: 1;
+                }
+            }
+            &:before {
+                content: '';
+                position: absolute;
+                width: 40px;
+                height: 40px;
+                background: #000000;
+                opacity: 0.24;
+                border-radius: 50% 50%;
+            }
+        }
+    }
+}
+
+.gs-chat__top-panel_chat {
+
+    .gs-chat__tab-chat {
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0) 45.54%, rgba(0, 0, 0, 0.5) 100%), rgba(42, 64, 84, 0.9);
+    }
+
+    .gs-chat__tab-chat {
+        svg {
+            &:first-child {
+                display: none;
+            }
+
+            &:last-child {
+                display: block;
+            }
+        }
+    }
+
+    .gs-chat__tab-support {
+        svg {
+            &:first-child {
+                display: block;
+            }
+
+            &:last-child {
+                display: none;
+            }
+        }
+    }
+}
+
+.gs-chat__top-panel_support {
+    .gs-chat__tab-support {
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0) 45.54%, rgba(0, 0, 0, 0.5) 100%), rgba(42, 64, 84, 0.9);
+    }
+    .gs-chat__tab-chat {
+        svg {
+            &:last-child {
+                display: none;
+            }
+
+            &:first-child {
+                display: block;
+            }
+        }
+    }
+
+    .gs-chat__tab-support {
+        svg {
+            &:last-child {
+                display: block;
+            }
+
+            &:first-child {
+                display: none;
+            }
+        }
+    }
+}
+
+.gs-chat__top-panel_new-chat {
+    .gs-chat__tab-chat {
+        .gs-chat__tab-icon {
+            &:before {
+                position: absolute;
+                right: -5px;
+                top: -5px;
+                content: '';
+                width: 8px;
+                height: 8px;
+                background: #08D6B7;
+                border-radius: 50% 50%;
+                box-shadow: 0px 3px 8px rgba(0, 255, 71, 0.5);
+            }
+        }
+    }
+}
+
+.gs-chat__top-panel_new-support {
+    .gs-chat__tab-support {
+        .gs-chat__tab-icon {
+            &:before {
+                position: absolute;
+                right: -5px;
+                top: -5px;
+                content: '';
+                width: 8px;
+                height: 8px;
+                background: #08D6B7;
+                border-radius: 50% 50%;
+                box-shadow: 0px 3px 8px rgba(0, 255, 71, 0.5);
+            }
+        }
+    }
+}

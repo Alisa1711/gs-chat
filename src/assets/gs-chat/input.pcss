@@ -1,0 +1,46 @@
+.gs-chat__input {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    padding: 34px 24px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.12);
+    textarea {
+        display: block;
+        border: none;
+        background: none;
+        width: 100%;
+        padding: 10px;
+        appearance: none;
+        resize: vertical;
+        overflow: auto;
+        outline: none;
+
+        &::placeholder {
+            position: relative;
+            top: 10px
+        }
+    }
+    &__icons {
+        display: flex;
+        align-items: center;
+        margin-left: auto;
+    }
+
+    &__attach, &__send {
+        background: none;
+        border: none;
+        opacity: 0.6;
+        cursor: pointer;
+        &:hover {
+            opacity: 1;
+        }
+    }
+    &__attach {
+        margin-left: auto;
+    }
+    &__send {
+        margin-left: 38px;
+    }
+}

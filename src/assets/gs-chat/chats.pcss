@@ -1,0 +1,29 @@
+.gs-chat__chats {
+    height: 100%;
+    min-height: inherit;
+    display: flex;
+    flex-direction: column;
+
+    &__blocked {
+        margin-top: auto;
+        text-align: center;
+        cursor: pointer;
+        font-size: 12px;
+        line-height: 24px;
+        color: rgba(42, 53, 63, 0.54);
+        &:hover {
+           color: rgba(42, 53, 63, 0.87);
+        }
+    }
+}
+
+.gs-chat__chat-item {
+    .gs-chat__chat-item__descr {
+        border-bottom: 1px solid #E1E1E1;
+    }
+    &:last-child {
+        .gs-chat__chat-item__descr {
+            border: none;
+        }
+    }
+}

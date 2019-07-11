@@ -1,0 +1,67 @@
+.gs-chat__member {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    &-more {
+        background: none;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        border: 2px solid #E3EFFA;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 88px;
+        height: 88px;
+        border-radius: 50% 50%;
+        font-size: 24px;
+        line-height: 28px;
+        text-align: center;
+        color: #08D6B7;
+        transition: all 0.3s ease-in-out;
+        &:hover {
+            border-color: #08D6B7;
+        }
+    }
+
+
+    &__avatar {
+        width: 88px;
+        height: 88px;
+        overflow: hidden;
+        border-radius: 50% 50%;
+        img {
+            transition: transform 0.4s;
+            height: auto;
+            max-width: 100%;
+        }
+        &:hover {
+            img {
+                transform: scale(1.2);
+            }
+        }
+    }
+    &__name {
+        margin-top: 8px;
+        font-size: 12px;
+        line-height: 14px;
+        text-align: center;
+        color: rgba(42, 53, 63, 0.54);
+    }
+}
+
+.gs-chat__member_size-large {
+    .gs-chat__member__avatar {
+        width: 163px;
+        height: 163px;
+    }
+}
+
+.gs-chat__member_size-min {
+    .gs-chat__member__avatar {
+        width: 40px;
+        height: 40px;
+    }
+}

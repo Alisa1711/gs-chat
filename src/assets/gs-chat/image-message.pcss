@@ -1,0 +1,76 @@
+.gs-chat__image-message {
+    margin-top: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 312px;
+    height: 288px;
+    left: 24px;
+    top: 1170px;
+    background: #FFFFFF;
+    border-radius: 0px 16px 16px 16px;
+    overflow: hidden;
+
+    &__inner {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: inherit;
+        width: inherit;
+        position: relative;
+    }
+
+    &__loader {
+        display: none;
+        width: 56px;
+        height: 56px;
+        border: 4px solid #08D6B7;
+        border-radius: 50%;
+        position: relative;
+        animation: loader-scale 1s ease-out infinite;
+    }
+
+    &__img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    }
+}
+
+@keyframes loader-scale {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0;
+    }
+}
+
+.gs-chat__image-message_loading {
+    .gs-chat__image-message__loader {
+        display: block;
+    }
+}
+
+.gs-chat__image-message_loaded {
+    cursor: pointer;
+    .gs-chat__image-message__img {
+        transition: transform 0.4s;
+    }
+    &:hover {
+        .gs-chat__image-message__img {
+            transform: scale(1.2);
+        }
+    }
+
+
+}

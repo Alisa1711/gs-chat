@@ -1,0 +1,96 @@
+.gs-chat__chat-view {
+    padding: 24px;
+    position: relative;
+    /*top: 60px;*/
+    height: 100%;
+    overflow: auto;
+    background-color: #EAEEF5;
+    scroll-behavior: smooth;
+  /*  &::-webkit-scrollbar {
+        width: 0;
+        background: transparent;
+    }
+    overflow: -moz-scrollbars-none;
+    -ms-overflow-style: none;
+    scroll-behavior: smooth;
+    */
+
+    &__loader {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &:before {
+            content: '';
+            width: 32px;
+            height: 32px;
+            border: 3px solid #08D6B7;
+            border-radius: 50%;
+            position: relative;
+            animation: loader-scale 1s ease-out infinite;
+        }
+    }
+
+    &__data {
+        margin-top: 9px;
+        padding-left: 12px;
+        padding-right: 12px;
+        padding-top: 9px;
+       /* padding-bottom: 9px;*/
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 14px;
+        text-align: center;
+        color: rgba(0, 0, 0, 0.87);
+        opacity: 0.6;
+    }
+
+    &__divider {
+        margin-top: 17px;
+        position: relative;
+    }
+
+    &__divider__inner {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 14px;
+        text-align: center;
+        color: rgba(42, 53, 63, 0.54);
+
+        span {
+            display: flex;
+            flex-shrink: 0;
+
+            &:before, &:after {
+                content: ' ';
+                width: 10px;
+            }
+        }
+
+        &:before, &:after {
+            position: relative;
+            content: '';
+            flex-grow: 1;
+            flex-basis: 50%;
+            opacity: 0.12;
+            border-bottom: 1px solid #000000;
+        }
+
+        &:before {
+            left: 0;
+        }
+
+        &:after {
+            right: 0;
+        }
+    }
+
+
+    .gs-chat__message, .gs-chat__message__status {
+        margin-top: 8px;
+    }
+}

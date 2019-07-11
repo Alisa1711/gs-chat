@@ -1,0 +1,38 @@
+.gs-chat__file-message {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 223px;
+    height: 70px;
+    background: #FCFCFC;
+    border-radius: 0px 16px 16px 16px;
+    cursor: pointer;
+
+    &__icon {
+        margin-left: 28px;
+        height: 20px;
+        width: 16px;
+        opacity: 0.5;
+        svg {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &__text {
+        margin-left: 12px;
+        font-size: 16px;
+        line-height: 140%;
+        color: #2A353F;
+        opacity: 0.87;
+    }
+
+    &:hover {
+        .gs-chat__file-message__text {
+            color: #08D6B7;
+        }
+        .file-min_svg__color {
+            fill: #08D6B7;
+        }
+    }
+}

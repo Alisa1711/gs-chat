@@ -1,0 +1,154 @@
+.gs-chat__sent-button {
+    position: absolute;
+    bottom: 24px;
+    right: 24px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    button {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /*position: relative;*/
+        border: none;
+        outline: none;
+        height: 72px;
+        width: 72px;
+        background: #08D6B7;
+        border-radius: 50% 50%;
+        cursor: pointer;
+
+        &:before, &:after {
+            flex-shrink: 0;
+            position: absolute;
+            content: '';
+            height: 96px;
+            width: 96px;
+            background: #08D6B7;
+            opacity: 0.1;
+            border-radius: 50% 50%;
+            animation: pin 2s linear 0s infinite normal;
+        }
+
+        &:after {
+            width: 144px;
+            height: 144px;
+            background: #08D6B7;
+            opacity: 0.05;
+            animation: pin 2.5s linear 0.4s infinite normal;
+        }
+
+        svg {
+            position: relative;
+            z-index: 2;
+            left: 3px;
+
+            .send_svg__color {
+                fill: #FFF;
+            }
+        }
+
+    }
+
+    span {
+        margin-top: 50px;
+        font-size: 12px;
+        line-height: 14px;
+        text-align: center;
+        color: rgba(0, 0, 0, 0.34);
+    }
+
+}
+@keyframes pin {
+    0% {
+        opacity: 0.6;
+        transform: scale(0.5);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(1);
+    }
+}
+
+.gs-chat__sent-button_size-min {
+
+    button {
+        width: 56px;
+        height: 56px;
+        box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.12);
+        transition: box-shadow 0.3s ease-in-out;
+
+        &:hover {
+            box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12);
+        }
+        &:active {
+            box-shadow: 0px 2px 2px rgba(0, 0, 0, 0);
+        }
+
+        &:before, &:after {
+            display: none;
+        }
+    }
+
+    span {
+        display: none;
+    }
+}
+
+.gs-chat__sent-button_parent-teamsview {
+    position: static;
+}
+
+.gs-chat__sent-button_parent-input {
+    display: block;
+    position: relative;
+    bottom: 0;
+    top: 0;
+    right: 0;
+
+    button {
+        width: 48px;
+        height: 48px;
+    }
+}
+
+
+.gs-chat__sent-button_size-nano {
+
+    button {
+        width: 21px;
+        height: 18px;
+        background: none;
+        padding: 0;
+        border-radius: 0;
+        flex-shrink: 0;
+        svg {
+            opacity: 0.5;
+            .send_svg__color {
+                fill: #2E4D6A;;
+            }
+        }
+
+        &:hover {
+            svg {
+                opacity: 1;
+            }
+        }
+        &:active {
+            box-shadow: 0px 2px 2px rgba(0, 0, 0, 0);
+        }
+
+        &:before, &:after {
+            display: none;
+        }
+    }
+
+
+
+    span {
+        display: none;
+    }
+}
