@@ -2,16 +2,17 @@
     position: relative;
     z-index: 2;
     display: flex;
+    padding: 32px 24px;
     align-items: center;
-    padding: 34px 24px;
     background: #FFFFFF;
     box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.12);
     textarea {
         display: block;
+        padding: 0;
         border: none;
         background: none;
         width: 100%;
-        padding: 10px;
+        line-height: 24px;
         appearance: none;
         resize: vertical;
         overflow: auto;
@@ -19,7 +20,6 @@
 
         &::placeholder {
             position: relative;
-            top: 10px
         }
     }
     &__icons {

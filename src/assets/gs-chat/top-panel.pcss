@@ -53,8 +53,10 @@
     }
 
     &__tab-support {
+
         .support-unactive_svg__color {
             opacity: 0.5;
+            transition: all 0.5s;
         }
 
         &:hover {
@@ -67,6 +69,7 @@
     &__tab-chat {
         .chat-unactive_svg__color {
             opacity: 0.5;
+            transition: all 0.5s;
         }
 
         &:hover {
@@ -99,10 +102,22 @@
             cursor: pointer;
             .sound_svg__color {
                 opacity: 0.5;
+                transition: all 0.5s;
             }
             .mute_svg__color {
                 opacity: 0.5;
+                transition: all 0.5s;
             }
+        }
+        &:before {
+          content: '';
+          position: absolute;
+          width: 0;
+          height: 0;
+          background: #000000;
+          opacity: 0;
+          border-radius: 50% 50%;
+          transition: all 0.2s;
         }
         &:hover {
             svg {
@@ -114,13 +129,9 @@
                 }
             }
             &:before {
-                content: '';
-                position: absolute;
                 width: 40px;
                 height: 40px;
-                background: #000000;
                 opacity: 0.24;
-                border-radius: 50% 50%;
             }
         }
     }
