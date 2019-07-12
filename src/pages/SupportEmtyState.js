@@ -56,8 +56,9 @@ export const SupportEmtyState = () => {
           <TopPanel state="static" support={true}/>
           <div className="gs-chat__content">
             <TeamsView moreMembers={<MoreMembers count={5}/>}
-                       sentButton={<SentButton onClick={SlideOut} parent="teamsview" size="big"/>}
-                       members={Members} title="Константин, доброе утро" subtitle="Команда отвечает в течении часа"/>
+                       sentButton={<SentButton onClick={SlideOut} mod="animation" parent="teamsview" size="big"/>}
+                       members={Members} title="Константин, доброе утро" subtitle="Команда отвечает в течении часа"
+                       buttonTip={<span>Нажмите, чтобы начать разговор</span>}/>
           </div>
         </div>
       </View>

@@ -2,7 +2,7 @@ import React from 'react';
 import {Member, MoreMembers} from './Member';
 import {avatars} from '../assets/avatars';
 
-export const TeamsView = ({state, members, memberSize, moreMembers, title, subtitle, sentButton, children}) => {
+export const TeamsView = ({state, members, memberSize, moreMembers, title, subtitle, sentButton, buttonTip, children}) => {
   return (
     <div class={`gs-chat__teams-view gs-chat__teams-view_${state}`}>
       <div class="gs-chat__teams-view__title">{title}</div>
@@ -21,8 +21,8 @@ export const TeamsView = ({state, members, memberSize, moreMembers, title, subti
       </div>
       <div class="gs-chat__teams-view__sent">
         {sentButton}
+        {buttonTip}
       </div>
-
     </div>
   );
 };
