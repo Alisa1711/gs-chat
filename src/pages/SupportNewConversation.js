@@ -33,6 +33,14 @@ const qustions = [
     text: 'Черный список исполнителей',
     link: '#',
   },
+  {
+    text: 'Черный список исполнителей',
+    link: '#',
+  },
+  {
+    text: 'Черный список исполнителей',
+    link: '#',
+  },
 ];
 
 export const SupportNewConversation = () => {
